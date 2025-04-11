@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodi/core/utils/app_router.dart';
 
 void main() {
   runApp(const Foodi());
@@ -9,9 +10,9 @@ class Foodi extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp.router(
+      routerConfig: AppRouter.router,
       debugShowCheckedModeBanner: false,
-      home: Scaffold(),
     );
   }
 }
